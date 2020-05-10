@@ -5,4 +5,11 @@ A novel user-agnostic approach for identity verification based on motion traits 
 
 
 ### Requirements
-* Python >= 3.6
+* Python 3.5
+* numpy (>= 1.14)
+* scikit-image (0.15.0)
+* scipy (1.1.0)
+* tensorflow-gpu (1.9.0)
+* keras (2.2.2)
+* scikit-learn (0.21.2)
+* matplotlib (3.0.3)
