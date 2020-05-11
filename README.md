@@ -34,7 +34,7 @@ Santos, Geise; Pisani, Paulo Henrique; Leyva, Roberto; Li, Chang-Tsun; Tavares, 
 * `subset`: subset of the target dataset to generate the frames `user_coordinates`, `raw_data`, or `subset_train_cnn`.
 * `path_frames`: absolute path of a folder where the frames are stored. It is stored the folders `gallery` and `probe` inside this folder, or/and the folders `train_cnn` and `validate_cnn`.
 * `train_cnn`: flag to indicate wheter the generated frames are from a subset to train the CNNs. If this is equal to 1, the frames will be stored on the folders `train_cnn` and `validate_cnn`.
-* `feature`: there were proposed two different images to input at the CNNs: Spectrogram and Accelerometer Dense Trajectories (ADT) images. So, this parameter should be `spectrogram_multiD` or `adt_features_multiD`.
+* `feature`: there were proposed two different images to input at the CNN model: Spectrogram and Accelerometer Dense Trajectories (ADT) images. Thus, this parameter must be `spectrogram_multiD` or `adt_features_multiD`.
 * `path_images`: absolute path of a folder where the images are stored. The images are generated for each of the folds `train_cnn`, `validate_cnn`, `gallery` and `probe`. A folder for each `feature` is created, and also a folder for each user.
 * `trainDir`: absolute path of the folder where the images to train the CNN (`train_cnn` fold) are stored. 
 * `valDir`: absolute path of the folder where the images to validate the CNN (`validate_cnn` fold) are stored.
