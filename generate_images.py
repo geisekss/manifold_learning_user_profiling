@@ -7,6 +7,15 @@ from scipy.misc import bytescale
 from matplotlib import mlab
 
 
+def trajectories_multiD(window_acc):
+        xyz_traj = np.zeros(window_acc.shape)
+        for k in range(1,window_acc.shape[0]):
+                xyz_traj[k,:] = xyz_traj[k-1,:] + window_acc[k, :]
+        xyz_traj = np.abs(xyz_traj)
+        xyz_traj = xyz_traj/max(np.max(xyz_traj, axis=0)+eps)
+        xyz_traj = xyz_traj[1:]
+        return xyz_traj
+        
 def spectrogram_multiD(frames_set, **kwargs):
 	n = int(frames_set.shape[1]/2.0)
 	features = np.array([np.dstack(([mlab.specgram(x=sequence[:, k], NFFT=128, Fs=Fs, noverlap=127, scale_by_freq=True, sides='twosided')[0][:, :-1].T for k in range(frames_set.shape[2])])) for sequence in frames_set])
